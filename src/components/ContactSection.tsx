@@ -61,7 +61,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative py-24 lg:py-32 overflow-hidden"
+      className="relative w-full py-24 lg:py-32 overflow-hidden"
       style={{ background: "linear-gradient(180deg, #112240 0%, #0a1628 100%)" }}
       aria-label="Contact section"
     >

@@ -60,7 +60,7 @@ export default function GallerySection() {
   return (
     <section
       id="gallery"
-      className="relative py-24 lg:py-32 overflow-hidden"
+      className="relative w-full py-24 lg:py-32 overflow-hidden"
       style={{ background: "linear-gradient(180deg, #0a1628 0%, #112240 100%)" }}
       aria-label="Photo gallery section"
     >

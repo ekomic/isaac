@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <LoadingScreen />
       <Navbar />
-      <main>
+      <main className="w-full">
         <HeroSection />
         <AboutSection />
         <VisionSection />

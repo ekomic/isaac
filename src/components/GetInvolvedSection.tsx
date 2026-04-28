@@ -53,7 +53,7 @@ export default function GetInvolvedSection() {
   return (
     <section
       id="get-involved"
-      className="relative py-24 lg:py-32 overflow-hidden"
+      className="relative w-full py-24 lg:py-32 overflow-hidden"
       style={{ background: "#0a1628" }}
       aria-label="Get involved section"
     >

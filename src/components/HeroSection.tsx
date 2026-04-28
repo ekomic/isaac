@@ -14,17 +14,15 @@ function fadeUp(delay: number) {
 }
 
 export default function HeroSection() {
-  const scrollToAbout = () => {
+  const scrollToAbout = () =>
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
-  };
-  const scrollToInvolved = () => {
+  const scrollToInvolved = () =>
     document.getElementById("get-involved")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
       aria-label="Hero section"
     >
       {/* Animated gradient background */}
@@ -51,22 +49,28 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left: Text */}
-          <div className="text-center lg:text-left">
+      {/* Content — full width, centered */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16">
+
+          {/* ── Left column: Text ── */}
+          <div className="flex-1 flex flex-col items-center text-center lg:items-start lg:text-left max-w-2xl">
+
             {/* Logos row */}
             <motion.div
-              className="flex items-center justify-center lg:justify-start gap-6 mb-8"
+              className="flex items-center justify-center gap-5 mb-8"
               {...fadeUp(0.1)}
             >
               <NigeriaCoatOfArmsInline className="w-14 h-14" />
               <div className="w-px h-12 bg-gradient-to-b from-transparent via-[#C9A84C]/60 to-transparent" />
               <APCLogo className="w-14 h-14" />
               <div className="hidden sm:flex flex-col">
-                <span className="text-[#C9A84C] text-xs font-semibold tracking-widest uppercase">All Progressives Congress</span>
-                <span className="text-white/60 text-xs tracking-wider">Federal Republic of Nigeria</span>
+                <span className="text-[#C9A84C] text-xs font-semibold tracking-widest uppercase">
+                  All Progressives Congress
+                </span>
+                <span className="text-white/60 text-xs tracking-wider">
+                  Federal Republic of Nigeria
+                </span>
               </div>
             </motion.div>
 
@@ -99,11 +103,14 @@ export default function HeroSection() {
             </motion.h1>
 
             {/* Candidate name */}
-            <motion.div className="mb-4" {...fadeUp(0.5)}>
+            <motion.div className="mb-4 w-full" {...fadeUp(0.5)}>
               <p className="text-[#C9A84C] text-sm font-semibold tracking-[0.25em] uppercase mb-1">
                 Hon. Amb.
               </p>
-              <p className="text-2xl sm:text-3xl font-bold text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <p
+                className="text-2xl sm:text-3xl font-bold text-white"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
                 Isaac Ali Kigbu
               </p>
               <p className="text-white/60 text-sm mt-1 tracking-wide">
@@ -113,7 +120,7 @@ export default function HeroSection() {
 
             {/* Tagline */}
             <motion.p
-              className="text-white/70 text-base sm:text-lg leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0"
+              className="text-white/70 text-base sm:text-lg leading-relaxed mb-10 max-w-lg"
               {...fadeUp(0.6)}
             >
               Experienced diplomat. Proven community leader. Ready to deliver
@@ -122,7 +129,7 @@ export default function HeroSection() {
 
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full"
               {...fadeUp(0.75)}
             >
               <button
@@ -133,7 +140,7 @@ export default function HeroSection() {
                   boxShadow: "0 8px 30px rgba(0,104,55,0.4)",
                 }}
               >
-                <span className="relative z-10 flex items-center gap-2">
+                <span className="relative z-10 flex items-center justify-center gap-2">
                   <Users size={16} />
                   Join the Movement
                 </span>
@@ -148,8 +155,12 @@ export default function HeroSection() {
                   color: "#C9A84C",
                   background: "rgba(201,168,76,0.05)",
                 }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = "rgba(201,168,76,0.15)"; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = "rgba(201,168,76,0.05)"; }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLButtonElement).style.background = "rgba(201,168,76,0.15)";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLButtonElement).style.background = "rgba(201,168,76,0.05)";
+                }}
               >
                 Learn More
               </button>
@@ -157,7 +168,7 @@ export default function HeroSection() {
 
             {/* Stats row */}
             <motion.div
-              className="flex items-center justify-center lg:justify-start gap-8 mt-12 pt-8 border-t border-white/10"
+              className="flex items-center justify-center lg:justify-start gap-8 mt-12 pt-8 border-t border-white/10 w-full"
               {...fadeUp(0.9)}
             >
               {[
@@ -166,7 +177,10 @@ export default function HeroSection() {
                 { value: "2", label: "Constituencies Served" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
-                  <p className="text-2xl font-black text-[#C9A84C]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  <p
+                    className="text-2xl font-black text-[#C9A84C]"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
                     {stat.value}
                   </p>
                   <p className="text-white/50 text-xs tracking-wide mt-0.5">{stat.label}</p>
@@ -175,21 +189,21 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right: Candidate photo */}
+          {/* ── Right column: Photo ── */}
           <motion.div
-            className="relative flex items-center justify-center"
+            className="flex-shrink-0 flex items-center justify-center"
             initial={{ opacity: 0, scale: 0.9, x: 40 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
           >
-            {/* Glow ring */}
+            {/* Glow */}
             <div
-              className="absolute inset-0 rounded-full opacity-20 blur-3xl"
+              className="absolute w-80 h-80 rounded-full opacity-20 blur-3xl pointer-events-none"
               style={{ background: "radial-gradient(circle, #006837 0%, transparent 70%)" }}
             />
 
             {/* Photo frame */}
-            <div className="relative w-72 h-72 sm:w-96 sm:h-96 lg:w-[420px] lg:h-[520px]">
+            <div className="relative w-72 sm:w-80 lg:w-[380px] h-[420px] sm:h-[460px] lg:h-[500px]">
               <div
                 className="absolute inset-0 rounded-2xl"
                 style={{
@@ -197,7 +211,10 @@ export default function HeroSection() {
                   padding: "2px",
                 }}
               >
-                <div className="w-full h-full rounded-2xl overflow-hidden" style={{ background: "#112240" }}>
+                <div
+                  className="w-full h-full rounded-2xl overflow-hidden"
+                  style={{ background: "#112240" }}
+                >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/images/candidate.jpg"
@@ -210,8 +227,8 @@ export default function HeroSection() {
                       if (parent) {
                         parent.innerHTML = `
                           <div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(180deg,#112240 0%,#0a1628 100%);">
-                            <div style="width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#006837,#004d28);display:flex;align-items:center;justify-content:center;border:3px solid #C9A84C;margin-bottom:16px;">
-                              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            <div style="width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,#006837,#004d28);display:flex;align-items:center;justify-content:center;border:3px solid #C9A84C;margin-bottom:16px;">
+                              <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                             </div>
                             <p style="color:#C9A84C;font-size:14px;font-weight:600;text-align:center;padding:0 16px;font-family:'Playfair Display',serif;">Hon. Amb. Isaac Ali Kigbu</p>
                             <p style="color:rgba(255,255,255,0.3);font-size:11px;margin-top:8px;">Add candidate.jpg to /public/images/</p>
@@ -226,7 +243,10 @@ export default function HeroSection() {
               {/* Floating badge: APC */}
               <motion.div
                 className="absolute -bottom-4 -left-4 px-4 py-2 rounded-xl shadow-2xl"
-                style={{ background: "linear-gradient(135deg, #006837, #004d28)", border: "1px solid rgba(201,168,76,0.4)" }}
+                style={{
+                  background: "linear-gradient(135deg, #006837, #004d28)",
+                  border: "1px solid rgba(201,168,76,0.4)",
+                }}
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
@@ -237,7 +257,10 @@ export default function HeroSection() {
               {/* Floating badge: House of Reps */}
               <motion.div
                 className="absolute -top-4 -right-4 px-4 py-2 rounded-xl shadow-2xl text-right"
-                style={{ background: "linear-gradient(135deg, #112240, #0a1628)", border: "1px solid rgba(201,168,76,0.3)" }}
+                style={{
+                  background: "linear-gradient(135deg, #112240, #0a1628)",
+                  border: "1px solid rgba(201,168,76,0.3)",
+                }}
                 animate={{ y: [0, 6, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
               >

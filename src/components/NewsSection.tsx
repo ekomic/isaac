@@ -68,7 +68,7 @@ export default function NewsSection() {
   return (
     <section
       id="news"
-      className="relative py-24 lg:py-32 overflow-hidden"
+      className="relative w-full py-24 lg:py-32 overflow-hidden"
       style={{ background: "#0a1628" }}
       aria-label="News and updates section"
     >

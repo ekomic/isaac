@@ -54,7 +54,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative py-24 lg:py-32 overflow-hidden"
+      className="relative w-full py-24 lg:py-32 overflow-hidden"
       style={{ background: "linear-gradient(180deg, #0a1628 0%, #112240 50%, #0a1628 100%)" }}
       aria-label="About section"
     >

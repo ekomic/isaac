@@ -32,7 +32,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="relative overflow-hidden"
+      className="relative w-full overflow-hidden"
       style={{ background: "#060e1a", borderTop: "1px solid rgba(201,168,76,0.15)" }}
       role="contentinfo"
     >
@@ -135,7 +135,7 @@ export default function Footer() {
 
         {/* Bottom row */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-center sm:text-left">
+          <div className="text-center">
             <p className="text-white/40 text-xs">
               © 2027 Hon. Amb. Isaac Ali Kigbu Campaign. All Rights Reserved.
             </p>
