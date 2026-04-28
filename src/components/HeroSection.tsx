@@ -51,10 +51,10 @@ export default function HeroSection() {
 
       {/* Content — full width, centered */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20">
-        <div className="flex flex-col items-center justify-center gap-12">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16">
 
           {/* ── Left column: Text ── */}
-          <div className="w-full flex flex-col items-center text-center max-w-2xl mx-auto">
+          <div className="flex-1 flex flex-col items-center text-center lg:items-start lg:text-left max-w-2xl">
 
             {/* Logos row */}
             <motion.div
@@ -103,7 +103,7 @@ export default function HeroSection() {
             </motion.h1>
 
             {/* Candidate name */}
-            <motion.div className="mb-4 w-full text-center" {...fadeUp(0.5)}>
+            <motion.div className="mb-4 w-full" {...fadeUp(0.5)}>
               <p className="text-[#C9A84C] text-sm font-semibold tracking-[0.25em] uppercase mb-1">
                 Hon. Amb.
               </p>
@@ -129,7 +129,7 @@ export default function HeroSection() {
 
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center w-full"
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full"
               {...fadeUp(0.75)}
             >
               <button
@@ -168,7 +168,7 @@ export default function HeroSection() {
 
             {/* Stats row */}
             <motion.div
-              className="flex items-center justify-center gap-8 mt-12 pt-8 border-t border-white/10 w-full"
+              className="flex items-center justify-center lg:justify-start gap-8 mt-12 pt-8 border-t border-white/10 w-full"
               {...fadeUp(0.9)}
             >
               {[
